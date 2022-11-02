@@ -2,6 +2,7 @@ require('dotenv').config()
 const mongoose = require('mongoose')
 const express = require('express')
 const cors = require('cors')
+const router = require('./routes/routes')
 
 const app = express()
 
@@ -14,5 +15,5 @@ mongoose.connect(process.env.MONGODB_URI).then(() => console.log("Connected data
 // Start server
 app.listen(process.env.PORT, () => console.log(`Server running at port ${process.env.PORT}`))
 
-app.get('/', (req, res) => res.send('Hello MEVN'))
-
+// Router
+app.use('/', router)
