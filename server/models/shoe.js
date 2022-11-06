@@ -9,6 +9,17 @@ const shoeSchema = mongoose.Schema({
         type : String,
         require: true
     },
+    price: {
+        type : String,
+        require: true
+    },
+    quality: {
+        type: Number,
+        require: true
+    },
+    state: {
+        type: Number,
+    },
     description: {
         type : String,
     },

@@ -44,7 +44,7 @@ module.exports = class API{
                     console.log(error)                    
                 }
             }
-            res.status(200).json(  {message: 'Shoe deleted successfully !'} )
+            res.status(200).json({message: 'Shoe deleted successfully !'})
         } catch (error) {
             res.status(400).json({ message: error.message })
         }

@@ -9,6 +9,8 @@ const app = express()
 app.use(cors())
 app.use(express())
 
+app.use(express.static('uploads'))
+
 // connect database
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log("Connected database successfully !")).catch((Error) => console.log(`Cannot connect to database \n ${Error}`))
 

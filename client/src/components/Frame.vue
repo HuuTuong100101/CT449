@@ -20,7 +20,7 @@
                     <v-list-item class="text-center">
                         <v-list-item-content>
                             <v-list-item-title class="text-h6">
-                                John Leider
+                                Hữu Tường
                             </v-list-item-title>
                             <v-list-item-subtitle>nt19801909@gmail.com</v-list-item-subtitle>
                         </v-list-item-content>
@@ -40,6 +40,7 @@
                     <v-list-item
                         v-for="(item, i) in items"
                         :key="i"
+                        :to="item.link"
                     >
                         <v-list-item-icon>
                         <v-icon v-text="item.icon"></v-icon>
@@ -126,42 +127,37 @@
                     <v-chip link>
                         <v-badge dot bottom color="green" offset-y="10" offset-x="10">
                         <v-avatar size="40">
-                            <v-img src="https://randomuser.me/api/portraits/women/81.jpg" />
+                            <v-img src="../assets/AvatarAdmin.jpg" />
                         </v-avatar>
                         </v-badge>
-                        <span class="ml-3">Jane Smith</span>
+                        <span class="ml-3">Hữu Tường</span>
                     </v-chip>
                     </span>
                 </template>
                 <v-list width="250" class="py-0">
                     <v-list-item two-line>
                         <v-list-item-avatar>
-                            <img src="https://randomuser.me/api/portraits/women/81.jpg" />
+                            <img src="../assets/AvatarAdmin.jpg" />
                         </v-list-item-avatar>
 
                         <v-list-item-content>
-                            <v-list-item-title>Jane Smith</v-list-item-title>
+                            <v-list-item-title>Hữu Tường</v-list-item-title>
                             <v-list-item-subtitle>Logged In</v-list-item-subtitle>
                         </v-list-item-content>
                     </v-list-item>
 
                     <v-divider />
 
-                    <v-list-tile v-for="(item, i) in items" :key="i">
-                        <router-link :to="item.link">
-                            <v-list-item-icon>
-                                <v-icon>{{ item.icon }}</v-icon>
-                            </v-list-item-icon>
+                    <v-list-item v-for="(menu, i) in menus" :key="i" link>
+                        <v-list-item-icon>
+                            <v-icon>{{ menu.icon }}</v-icon>
+                        </v-list-item-icon>
 
-                            <v-list-item-title>
-                                {{ item.link }}
-                            </v-list-item-title>
-<!--     
-                            <v-list-item-title>
-                                {{ item.title }}
-                            </v-list-item-title> -->
-                        </router-link>
-                    </v-list-tile>
+                        <v-list-item-title>
+                            {{ menu.title }}
+                        </v-list-item-title>
+
+                    </v-list-item>
                 </v-list>
             </v-menu>
         </v-app-bar>
