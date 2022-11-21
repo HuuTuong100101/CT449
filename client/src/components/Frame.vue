@@ -180,6 +180,7 @@
             items: [
                 { text: 'Dashboard', icon: 'mdi-view-dashboard-edit-outline', link:'/'},
                 { text: 'Products', icon: 'mdi-shoe-sneaker', link:'/Product'},
+                { text: 'User', icon: 'mdi-account-multiple', link:'/User'},
                 { text: 'Orders', icon: 'mdi-cart-percent', link:'/Order'},
             ],
         }),
