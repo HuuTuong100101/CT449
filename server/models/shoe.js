@@ -23,7 +23,7 @@ const shoeSchema = mongoose.Schema({
     description: {
         type : String,
     },
-    image: {
+    Image: {
         type : String,
         require: true
     },

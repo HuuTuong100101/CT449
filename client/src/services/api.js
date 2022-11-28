@@ -27,6 +27,7 @@ export default class API {
     // Add a product into database
     static async addProduct(shoe) {
         const res = await axios.post(url,shoe)
+        console.log("YES")
         return res.data
     }
 

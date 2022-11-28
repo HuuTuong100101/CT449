@@ -39,7 +39,7 @@
                             required
                         ></v-textarea>
                         <v-file-input
-                            v-model="shoe.image"
+                            v-model="shoe.Image"
                             @change="selectFile"
                             :rules="rules"
                             label="Image"
@@ -71,19 +71,19 @@ import API from '@/services/api'
                     price:"",
                     quality:"",
                     description:"",
-                    image:"",
+                    Image:"",
                 },
-                image:"",
+                Image:"",
             }
         },
         methods: {
             selectFile(file) {
-                this.image = file[0]
+                this.Image = file[0]
             },
 
             async submitForm() {
                 const formData = new FormData()
-                formData.append("image", this.image)
+                formData.append("Image", this.Image)
                 formData.append("name", this.shoe.name)
                 formData.append("brand", this.shoe.brand)
                 formData.append("price", this.shoe.price)
